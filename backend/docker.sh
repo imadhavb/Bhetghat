@@ -7,6 +7,9 @@ shift
 case $CMD in
 
     dev)
+        echo "Application is running in development mode"
+        echo "Installing node_modules in host machine for code intellisense in dev environment"
+        npm install
         docker-compose up -d --build dev
         docker-compose logs -f
         ;;
